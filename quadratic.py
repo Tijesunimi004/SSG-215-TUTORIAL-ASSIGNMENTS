@@ -3,9 +3,40 @@
 print("Quadratic equations are in the form ax^2+bx+c = 0")
 print("Please enter a, b and c with respect to your equation")
 def quadratic():
-    a = float(input("Enter a: "))
-    b = float(input("Enter b: "))
-    c = float(input("Enter c: "))
+    
+    while True:
+        try:
+            a = float(input("Enter a: "))
+
+            if a.is_integer() or not float.is_integer(a):
+                break
+            else:
+                print("Please enter an integer or a float.")
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
+
+    while True:
+        try:
+            b = float(input("Enter b: "))
+
+            if b.is_integer() or not float.is_integer(b):
+                break
+            else:
+                print("Please enter an integer or a float.")
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
+
+    while True:
+        try:
+            c = float(input("Enter c: "))
+
+            if c.is_integer() or not float.is_integer(c):
+                break
+            else:
+                print("Please enter an integer or a float.")
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
+
     root = ((b ** 2) - (4* a* c))
     square_root = ((b ** 2) - (4 * a * c)) ** 0.5
     if root < 1:

@@ -6,10 +6,15 @@ def quadratic():
     a = float(input("Enter a: "))
     b = float(input("Enter b: "))
     c = float(input("Enter c: "))
-    roots = ((b ** 2) - (4* a* c)) ** 0.5
-    x1 = (((-b) + roots) / (2 * a))
-    x2 = (((-b) - roots) / (2 * a))
-    return x1, x2
+    root = ((b ** 2) - (4* a* c))
+    square_root = ((b ** 2) - (4 * a * c)) ** 0.5
+    if root < 1:
+        print("It's a complex root please try again")
+        quadratic()
+    else:
+        x1 = (((-b) + square_root) / (2 * a))
+        x2 = (((-b) - square_root) / (2 * a))
+        return x1, x2
 
 answer = quadratic()
 
